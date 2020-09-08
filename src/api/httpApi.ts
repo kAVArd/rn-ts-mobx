@@ -1,6 +1,6 @@
-import axios, {AxiosInstance} from 'axios';
+import axios, { AxiosInstance } from 'axios';
 
-import {anyJson} from 'typings/any_json';
+import { anyJson } from 'typings/any_json';
 
 export interface Headers {
   [header: string]: string | number;
@@ -16,7 +16,7 @@ export interface HttpApi {
   delete: <T>(url: string, config?: anyJson) => Promise<T>;
 }
 
-export class Http implements HttpApi {
+export default class Http implements HttpApi {
   private baseUrl: string;
   private headers: Headers;
   private axiosInstance: AxiosInstance;
@@ -24,7 +24,7 @@ export class Http implements HttpApi {
   constructor(baseURL: string = '', headers: Headers = {}) {
     this.baseUrl = baseURL;
     this.headers = headers;
-    this.axiosInstance = axios.create({baseURL, headers});
+    this.axiosInstance = axios.create({ baseURL, headers });
   }
 
   public setBaseUrl(url: string) {
