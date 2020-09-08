@@ -1,5 +1,5 @@
 import React from 'react';
-import {ThemeProvider} from '@shopify/restyle';
+import { ThemeProvider } from '@shopify/restyle';
 
 import AppRoutes from './AppRoutes';
 import theme from 'theme';
