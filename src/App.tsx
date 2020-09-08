@@ -4,10 +4,6 @@ import AppRoutes from './AppRoutes';
 
 declare const global: {HermesInternal: null | {}};
 
-const App = () => {
-  return (
-      <AppRoutes />
-  );
-};
+const App = () => <AppRoutes />;
 
 export default App;

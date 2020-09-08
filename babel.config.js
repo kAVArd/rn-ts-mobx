@@ -16,6 +16,7 @@ module.exports = {
           stores: './src/stores',
           theme: './src/theme',
           utils: './src/utils',
+          typings: './src/typings',
         },
       },
     ],
